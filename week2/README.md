@@ -1,4 +1,4 @@
-# Wekk 3 workshop task
+# Wekk 2 workshop task
 
 # Task 1
 
@@ -9,4 +9,4 @@
 # Task 2
 
 1. create index.html
-
+2. create style.css
