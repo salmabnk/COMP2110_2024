@@ -1,0 +1,53 @@
+body {
+    background-color: gold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    height:200px;
+    width:25%;
+    margin-left:-30px;
+    padding: 10px;
+}
+
+#units_section {
+    margin:10px;
+    padding: 10px;
+}
+
+#units_table {
+    border-style:dotted;
+    border-width: 2px;
+    border-color: brown;
+    tr:hover {background-color:burlywood}
+    tr:nth-child(1) {background-color: #bd4e4e;}
+}
+
+#unit-table, th, td {
+    border:1px solid;
+    
+}
+
+em{
+    color: brown;
+}
+
+p{
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif
+    font-style: italic;
+    color:rgb(51, 117, 117);
+}
+h1{
+    color: #ca2525;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    color: blue;
+}
+
+#video_section{
+    margin: 10px;
+    padding: 10px;
+}
