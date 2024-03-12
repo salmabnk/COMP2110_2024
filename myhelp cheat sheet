@@ -1,0 +1,20 @@
+
+# git and github
+
+1. Clone and use a GitHub repository in Visual Studio Code https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/with-visual-studio-code/clone-github-repository?tabs=activity-bar
+    ctrl + shift + g 
+2. undo the last commit https://bobbyhadz.com/blog/vscode-undo-last-git-commit 
+
+# HTML shortcuts
+
+1. ! + Enter                                       |        to get a basic html structure. Know your <html> tags https://www.w3schools.com/tags/default.asp
+2. Ctrl + / on PC or Command + / on Mac            |        to comment
+
+
+# Announcement: 
+1. Get ready for the workshop before hand
+2. drop-in session
+3. open readme. update readme as you complete your task.
+4. commit
+5. push the changes and updates to github
+6. use stackoverflow for any troubleshooting 

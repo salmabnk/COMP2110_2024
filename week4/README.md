@@ -34,3 +34,6 @@ function changeHeader3(message){
       for(let i = 0; i<headlines3.length; i++){
        headlines3[i].innerHTML = message;   } }
 changeHeader3("Targetting Headlines <h3>");
+
+# Task 2
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
