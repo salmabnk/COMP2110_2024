@@ -1,0 +1,17 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+}
+#content{
+    width: 200px;
+    height: 200px;
+    margin:auto;
+    text-align: center;
+}
+
+.bookscover{
+    width: 100px;
+    height: 100px;
+}
