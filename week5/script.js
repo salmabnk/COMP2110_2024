@@ -146,14 +146,13 @@ const renderBooks = (bookArray, id) => {
   let list = "<ul>";
   for (let i=0; i<bookArray.length;i++) {
     console.log('entered function2');
-    list += `<li>${bookArray[i].author}
-    <img class ="bookscover" src="${bookArray[i].imageLink}" alt ="Books Cover Page for ${bookArray[i].author}>"
+    list += `<li>${bookArray[i].title} by <em> ${bookArray[i].author}
+    <!--<img class ="bookscover" src="${bookArray[i].imageLink}" alt ="Books Cover Page for ${bookArray[i].author}>"-->
     </li>`;
   }
   list += "</ul>";
   target.innerHTML = list;
 };
-
 const renderdetailedView = (bookArray2, id) => {
   console.log('entered detailedView function');
   const target = document.getElementById('content');
@@ -166,7 +165,7 @@ const renderdetailedView = (bookArray2, id) => {
         <dl class="book-description">
             <dt>Author</dt><dd>${book.author}</dd>
             <dt>Country</dt><dd>${book.country}</dd>
-            <dt>Country</dt><dd>${book.language}</dd>
+            <dt>Language</dt><dd>${book.language}</dd>
         </dl>
         </div>`
 };
@@ -196,5 +195,4 @@ const render = () => {
 };
 
 window.onload = () => {
-  render();
-}
+  render();}
