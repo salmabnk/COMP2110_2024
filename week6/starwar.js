@@ -6,29 +6,62 @@ class StarWars extends LitElement {
         film: {type: String},
         _data: {state: true} //data you get from API
     }
+
+    static styles = css`
+    .crawl {
+        margin: auto;
+        text-align: center;
+    }
+    .crawl p {
+        line-height: 5px;
+        font-variant: small-caps;
+    }`;
+
     static BASE_URL = "https://swapi.dev/api/films/";
 
     constructor() {         
         super();
         this.film = "1";        //initialise the value to 1
+        this._films = [1, 2, 3, 4, 5, 6]
     }
 
     connectedCallback(){        //connect to the DOM, then call back
         super.connectedCallback();
-        const url = StarWars.BASE_URL + this.film;
-        fetch(url)        
+        this._fetch();
+    }
+
+    _fetch(){
+         fetch(StarWars.BASE_URL + this._film)        
         .then(response => response.json())
         .then(data => {
             this._data = data;
         });
     }
+    _updateFilm(e) {
+        this.film = e.target.value;
+        this._data = undefined;
+        this._fetch();  
+    }
 
     render() {
-        console.log('render',this._data);
         if (this._data){
-            return html`<h2>${this._data.title}</h2>
-            <p>Directed by: ${this._data.director}</p>`;
-        }
+            const crawl = this._data.opening_crawl.split('\r\n')
+            return html`
+            <form>
+            <select name="film" @change=${this._updateFilm}>
+                ${this._films.map(film => {
+                    console.log(film===this._film);
+                    let selected = film == this.film;
+                    return html `<option name=${film}' ?selected=${selected}${film}
+                    </option>`
+                })}
+            </select>
+            </form>
+
+            <h2>${this._data.title}</h2>
+            <p>Directed by: ${this._data.director}</p>
+            <div class='crawl'>${crawl.map(line => html`<p>${line}</p>`)}</div>`;
+            }
         else {
             return html`<p>Loading ...${this.film}</p>`;
         }
