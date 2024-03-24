@@ -39,8 +39,9 @@ class StarWars extends LitElement {
     render() {
         console.log('render',this._data);
         if (this._data){
-            return html`<h2 class="episode">${this._data.title} 
-            Episode ID ${this._data.episode_id} </h2>
+            return html`<h2 class="episode">Episode ID ${this._data.episode_id}:
+           <span style="font-family: Cursive; color:green"> ${this._data.title} </span></h2>
+             
            
             <p>Opening Crawl: <em> ${this._data.opening_crawl} </em></p>
             <p class="details">Directed by: ${this._data.director},
