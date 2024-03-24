@@ -10,15 +10,19 @@ class PageHeader extends LitElement {
     static styles = css`
         :host { font-family: monospace; }
         header { background-color: cyan; }
-        img { border: 1px solid black; width: 100px; height: 100px; }
-        h1 {text-align: center; color: blue;}
+        .center {
+            display: block;
+            border: 1px solid black; width: 100px; height: 100px; 
+            margin-left: auto;
+            margin-right: auto; }        
+        h1 { text-align: center; color: grey;}
     `;
 
     render() {
         return html`
         <header>
-        <img src=${this.logo} alt="company logo">
         <h1>${this.title}</h1>
+        <img src=${this.logo} alt="company logo" class="center">
         </header>`
     }
 }

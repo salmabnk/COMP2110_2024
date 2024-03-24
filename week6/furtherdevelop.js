@@ -4,9 +4,8 @@ class StarWars extends LitElement {
 
     static properties = {
         film: {type: String},
-        _data: {state: true} //data you get from API
+        _data: {state: true}
     }
-
     static styles = css`
     .crawl {
         margin: auto;
@@ -19,51 +18,52 @@ class StarWars extends LitElement {
 
     static BASE_URL = "https://swapi.dev/api/films/";
 
-    constructor() {         
+    constructor() {
         super();
-        this.film = "1";        //initialise the value to 1
+        this.film = "1";
         this._films = [1, 2, 3, 4, 5, 6]
     }
 
-    connectedCallback(){        //connect to the DOM, then call back
+    connectedCallback() {
         super.connectedCallback();
         this._fetch();
     }
 
-    _fetch(){
-         fetch(StarWars.BASE_URL + this._film)        
+    _fetch () {
+        fetch(StarWars.BASE_URL + this.film)
         .then(response => response.json())
-        .then(data => {
+        .then(data => { 
             this._data = data;
         });
     }
+
     _updateFilm(e) {
         this.film = e.target.value;
         this._data = undefined;
         this._fetch();  
     }
 
-    render() {
-        if (this._data){
+    render() { 
+        if (this._data) {
             const crawl = this._data.opening_crawl.split('\r\n')
             return html`
             <form>
-            <select name="film" @change=${this._updateFilm}>
-                ${this._films.map(film => {
-                    console.log(film===this._film);
-                    let selected = film == this.film;
-                    return html `<option name=${film}' ?selected=${selected}${film}
-                    </option>`
-                })}
-            </select>
+                <select name="film" @change=${this._updateFilm}>
+                    ${this._films.map(film => {
+                        console.log(film===this._film);
+                        let selected = film == this.film;
+                        return html`<option name=${film} ?selected=${selected}>${film}</option>`
+                    }
+                        )}
+                </select>
             </form>
-
+            
             <h2>${this._data.title}</h2>
             <p>Directed by: ${this._data.director}</p>
+            
             <div class='crawl'>${crawl.map(line => html`<p>${line}</p>`)}</div>`;
-            }
-        else {
-            return html`<p>Loading ...${this.film}</p>`;
+        } else {
+            return html`<p>Loading...${this.film}</p>`;
         }
     }
 

@@ -9,7 +9,7 @@ class PageFooter extends LitElement {
 
       static style = css`
       :host { font-family: monospace; }
-      h3 {text-align: center; }
+      p { position: relative; text-align: center; bottom: 0; font-family: 'Lato'; }
       `;
     
       constructor(){
@@ -19,7 +19,8 @@ class PageFooter extends LitElement {
       render() {
         return html`
         <footer>
-          <h3>${this.title} ${this._year} &copy; Salma Khan</h3>
+        <hr>  
+        <p>${this.title} ${this._year} &copy; Salma Khan</p>
         <footer>`
       }
     }
