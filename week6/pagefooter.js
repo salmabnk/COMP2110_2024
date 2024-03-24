@@ -13,7 +13,7 @@ class PageFooter extends LitElement {
       }
       render() {
         return html`
-        <footer style="border-top: 1px solid black;">
+        <footer style="border-top: 1px solid black; text-align:center">
        ${this.title} ${this._year} &copy; Salma Khan
         <footer>`
       }
