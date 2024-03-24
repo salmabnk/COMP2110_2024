@@ -7,10 +7,13 @@ class PageFooter extends LitElement {
         _year: {state: true}
      };
 
-      static style = css`
-      :host { font-family: monospace; }
-      p { position: relative; text-align: center; bottom: 0; font-family: 'Lato'; }
-      `;
+      // static style = css`
+      // :host{ display: block;}
+      // footer{
+      //     position: bottom;
+      //     border-bottom: 1px solid black;
+      //   }
+      // `;
     
       constructor(){
         super();
@@ -18,9 +21,8 @@ class PageFooter extends LitElement {
       }
       render() {
         return html`
-        <footer>
-        <hr>  
-        <p>${this.title} ${this._year} &copy; Salma Khan</p>
+        <footer><hr>
+       ${this.title} ${this._year} &copy; Salma Khan
         <footer>`
       }
     }
