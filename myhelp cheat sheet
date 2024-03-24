@@ -18,3 +18,6 @@
 4. commit
 5. push the changes and updates to github
 6. use stackoverflow for any troubleshooting 
+
+# How to get console at the bottom of browser
+ Ctrl + Shift + D will dock all devtools to left, right, bottom in turn. Press Ctrl + Shift + F if your JS console disappeared, and you want it docked back to bottom within dev tools.

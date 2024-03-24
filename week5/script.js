@@ -147,8 +147,7 @@ const renderBooks = (bookArray, id) => {
   for (let i=0; i<bookArray.length;i++) {
     console.log('entered function2');
     list += `<li>${bookArray[i].title} by <em> ${bookArray[i].author}
-    <!--<img class ="bookscover" src="${bookArray[i].imageLink}" alt ="Books Cover Page for ${bookArray[i].author}>"-->
-    </li>`;
+     </li>`;
   }
   list += "</ul>";
   target.innerHTML = list;
