@@ -6,22 +6,14 @@ class PageFooter extends LitElement {
         title: {type:String},
         _year: {state: true}
      };
-
-      // static style = css`
-      // :host{ display: block;}
-      // footer{
-      //     position: bottom;
-      //     border-bottom: 1px solid black;
-      //   }
-      // `;
-    
+        
       constructor(){
         super();
         this._year = (new Date()).getFullYear();
       }
       render() {
         return html`
-        <footer><hr>
+        <footer style="border-top: 1px solid black;">
        ${this.title} ${this._year} &copy; Salma Khan
         <footer>`
       }
