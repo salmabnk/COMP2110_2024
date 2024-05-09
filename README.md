@@ -1,4 +1,4 @@
-# Salma COMP2110_2024
+# Salma COMP2110_2024 (Total 113 groups)
 Meeting 
 1. video having an option to hide the speaker. to allow the commands to be visible.
 2. demonstrate an example to create a widget.
